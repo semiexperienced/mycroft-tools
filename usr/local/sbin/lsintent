@@ -124,11 +124,11 @@ function listSkills()
     filterClause="| grep $pattern"         # add search filter
   fi
   if [ "$skillsType" = all ]; then         # show all skills
-    output=`mycroft-msm list`
+    output=`msm list`
   elif [ "$skillsType" = installed ]; then # show just skills installed
-    output=`mycroft-msm list | grep '[installed]'`
+    output=`msm list | grep '[installed]'`
   else                                     # assume 'unistalled'
-    output=`mycroft-msm list | grep -v '[installed]'`
+    output=`msm list | grep -v '[installed]'`
   fi
  }                                         # listSkills()
 
